@@ -7,36 +7,34 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="/static/js/semantic/semantic.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/me.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/static/js/semantic/semantic.min.js"></script>
   </head>
   <body>
     <!-- 导航 -->
-    <nav class="ui inverted attached segment m-padded-tb-mini">
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
       <div class="ui container">
-        <div class="ui inverted secondary menu">
+        <div class="ui inverted secondary stackable menu">
           <h2 class="ui teal header item">Blog</h2>
-          <a href="#" class="item">
+          <a href="#" class="active m-item item m-mobile-hide">
             <i class="home icon"></i>
             首页
           </a>
-          <a href="#" class="item">
-            <i class="ieda icon"></i>
+          <a href="#" class="m-item item m-mobile-hide">
+            <i class="idea icon"></i>
             分类
           </a>
-          <a href="#" class="item">
+          <a href="#" class="m-item item m-mobile-hide">
             <i class="tags icon"></i>
             标签
           </a>
-          <a href="#" class="item">
+          <a href="#" class="m-item item m-mobile-hide">
+            <i class="clone icon"></i>
+            归档
+          </a>
+          <a href="#" class="m-item item m-mobile-hide">
             <i class="info icon"></i>
             关于
           </a>
-          <div class="right item">
+          <div class="right m-item  item m-mobile-hide">
             <div class="ui icon inverted transparent input">
               <input type="text" placeholder="Search..." />
               <i class="search link icon"></i>
@@ -44,12 +42,16 @@
           </div>
         </div>
       </div>
+      <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show ">
+        <i class="sidebar icon"></i>
+      </a>
     </nav>
     <!-- END 导航 -->
     <!-- 中间内容 -->
-    <div class="m-container m-padded-tb-large">
+    <div class="m-container m-padded-tb-big">
       <div class="ui container">
-        <div class="ui grid">
+        <div class="ui stackable grid">
+          <!-- 左侧博客列表 -->
           <div class="eleven wide column">
             <!-- header -->
             <div class="ui top attached segment">
@@ -67,11 +69,11 @@
             <!-- content -->
             <div class="ui attached  segment">
               <div class="ui padded vertical segment m-padded-tb-large">
-                <div class="ui grid">
+                <div class="ui mobile reversed stackable grid">
                   <div class="eleven wide column">
                     <h3 class="ui header">博客标题</h3>
                     <p class="m-text">博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容</p>
-                    <div class="ui grid">
+                    <div class="ui stackable grid">
                       <div class="eleven wide column">
                         <div class="ui mini horizontal link list">
                           <div class="item">
@@ -102,11 +104,11 @@
               </div>
 
               <div class="ui padded vertical segment m-padded-tb-large">
-                <div class="ui grid">
+                <div class="ui mobile reversed stackable grid">
                   <div class="eleven wide column">
                     <h3 class="ui header">博客标题</h3>
                     <p class="m-text">博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容</p>
-                    <div class="ui grid">
+                    <div class="ui stackable grid">
                       <div class="eleven wide column">
                         <div class="ui mini horizontal link list">
                           <div class="item">
@@ -137,11 +139,11 @@
               </div>
 
               <div class="ui padded vertical segment m-padded-tb-large">
-                <div class="ui grid">
+                <div class="ui mobile reversed stackable grid">
                   <div class="eleven wide column">
                     <h3 class="ui header">博客标题</h3>
                     <p class="m-text">博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容博客内容</p>
-                    <div class="ui grid">
+                    <div class="ui stackable grid">
                       <div class="eleven wide column">
                         <div class="ui mini horizontal link list">
                           <div class="item">
@@ -171,13 +173,12 @@
                 </div>
               </div>
 
-              
             </div>
             <!-- end content -->
 
             <!-- footer -->
             <div class="ui bottom attached segment">
-              <div class="ui middle aligned two column grid">
+              <div class="ui stackable middle aligned two column grid">
                 <div class="column">
                   <a href="#" class="ui mini teal basic button">上一页</a>
                 </div>
@@ -188,9 +189,99 @@
             </div>
             <!-- end footer -->
           </div>
+          <!-- end 左侧博客列表 -->
+
+          <!-- 右侧边栏 -->
           <div class="five wide column">
-            <div class="ui segment">1111</div>
+            <!-- 分类 -->
+            <div class="ui segments">
+              <div class="ui secondary segment">
+                <div class="ui two column grid">
+                  <div class="column"><i class="idea icon"></i>分类</div>
+                  <div class="right aligned column">
+                    <a href="#">more <i class="angle double right icon"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="ui segment">
+                <div class="ui fluid vertical menu">
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                  <a href="#" class="item">
+                    Spring Boot
+                    <div class="ui teal basic left pointing label">13</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- end 分类 -->
+            <!-- 标签 -->
+            <div class="ui segments">
+              <div class="ui secondary segment">
+                <div class="ui two column grid">
+                  <div class="column"><i class="tags icon"></i>标签</div>
+                  <div class="right aligned column">
+                    <a href="#">more <i class="angle double right icon"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="ui teal segment">
+                <a href="#" class="ui teal label m-margin-tb-tiny">java <div class="detail">11</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">aoc <div class="detail">2</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">nodejs <div class="detail">3</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">nestjs <div class="detail">1</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">css <div class="detail">4</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">flutter <div class="detail">7</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">reactjs <div class="detail">8</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">vue <div class="detail">21</div></a>
+                <a href="#" class="ui teal label m-margin-tb-tiny">express <div class="detail">12</div></a>
+              </div>
+            </div>
+            <!-- end 标签 -->
+
+            <!-- 最新推荐 -->
+            <div class="ui segments">
+              <div class="ui secondary segment">
+                <div class="column"><i class="bookmark icon"></i>最新推荐</div>
+              </div>
+              <div class="ui teal segment">
+                <a href="#" class="m-black">nodejs从小白到高手</a>
+              </div>
+              <div class="ui segment">
+                <a href="#" class="m-black">nodejs从小白到高手</a>
+              </div>
+              <div class="ui segment">
+                <a href="#" class="m-black">nodejs从小白到高手</a>
+              </div>
+            </div>
+            <!-- end 最新推荐 -->
+
+            <!-- 二维码 -->
+            <h4 class="ui horizontal divider m-margin-t-large">扫码关注我</h4>
+            <div class="ui centered card" style="width: 11em;">
+              <img src="./static//images/wechat.png" alt="" class="ui rounded image" >
+            </div>
+            <!-- end 二维码 -->
           </div>
+          <!-- 右侧边栏 -->
         </div>
       </div>
     </div>
@@ -227,9 +318,20 @@
           </div>
         </div>
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright &copy; 2016-2017 Haight Designed by Haight</p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright &copy; 2016-2017 Haight Designed by Haight</p>
       </div>
     </footer>
     <!-- END 页脚 -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/static/js/semantic/semantic.min.js"></script>
+    <script>
+      $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide')
+      })
+    </script>
   </body>
 </html>
