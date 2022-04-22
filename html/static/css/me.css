@@ -10,6 +10,10 @@ body {
   /* semantic 1em = 14px */
   padding: 0.3em !important;
 }
+.m-padded {
+  /* semantic 1em = 14px */
+  padding: 1em !important;
+}
 .m-padded-tb-mini {
   /* semantic 1em = 14px */
   padding-top: 0.2em !important;
@@ -152,12 +156,23 @@ body {
   color: #333;
 }
 
-/*---- 位置 ------*/
+/*---- position ------*/
 .m-right-top{
   position: absolute;
   top:0;
   right:0;
 }
+
+.m-right-bottom{
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.m-fixed{
+  position: fixed !important;
+  z-index: 10 !important;
+}
+
 
 
 .m-mobile-show {
