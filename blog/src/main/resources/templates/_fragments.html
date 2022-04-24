@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:replace="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/js/semantic/semantic.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/typo.css}" />
+    <link rel="stylesheet" th:href="@{/css/animate.css}" />
+    <link rel="stylesheet" th:href="@{/lib/prism/prism.css}" />
+    <link rel="stylesheet" th:href="@{/lib/tocbot/tocbot.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/me.css}" />
+</head>
+<body>
+<!-- 导航 -->
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'">
+                <i class="home icon"></i>
+                首页
+            </a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'">
+                <i class="idea icon"></i>
+                分类
+            </a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'">
+                <i class="tags icon"></i>
+                标签
+            </a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'">
+                <i class="clone icon"></i>
+                归档
+            </a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'">
+                <i class="info icon"></i>
+                关于
+            </a>
+            <div class="right m-item  item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search..." />
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show ">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!-- END 导航 -->
+
+<!-- 页脚 -->
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <div class="three wide column">
+                <div class="ui list">
+                    <div class="item">
+                        <img th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 110px" />
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:blog@qq.com</a>
+                    <a href="#" class="item">QQ:1234567</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客，会分享关于编程、写作、细考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright &copy; 2016-2017 Haight Designed by Haight</p>
+    </div>
+</footer>
+<!-- END 页脚 -->
+<th:block th:fragment="script">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/js/semantic/semantic.min.js}"></script>
+    <script th:src="@{/lib/prism/prism.js}"></script>
+    <script th:src="@{/lib/tocbot/tocbot.js}"></script>
+    <script th:src="@{/lib/qrcodejs/qrcode.js}"></script>
+    <script th:src="@{/lib/jquery.scrollTo/jquery.scrollTo.js}"></script>
+    <script th:src="@{/lib/waypoints/jquery.waypoints.js}"></script>
+</th:block>
+</body>
+</html>

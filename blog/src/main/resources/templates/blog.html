@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>详情</title>
+  </head>
+  <body>
+    <!-- 导航 -->
+    <div th:replace="_fragments :: menu(0)"></div>
+    <!-- END 导航 -->
+    <!-- 中间内容 -->
+    <div id="waypoint" class="m-container m-padded-tb-big animate__animated animate__fadeIn">
+      <div class="ui container">
+        <!-- 头部额文章元数据 -->
+        <div class="ui top attached segment">
+          <div class="ui horizontal link list">
+            <div class="item">
+              <img src="https://picsum.photos/100/100" alt="" class="ui avatar image">
+              <div class="content">
+                <a href="#" class="header">haight</a>
+              </div>
+            </div>
+            <div class="item">
+              <i class="calendar icon"></i> 2022-12-12
+            </div>
+            <div class="item">
+              <i class="eye icon"></i> 88
+            </div>
+          </div>
+        </div>
+        <!-- end 头部额文章元数据 -->
+
+        <!-- 文章banner图片 -->
+        <div class="ui attached segment">
+          <img src="https://picsum.photos/800/400" alt="" class="ui fluid rounded image">
+        </div>
+        <!-- end 文章banner图片 -->
+        <!-- 文章内容 -->
+        <div class="ui attached padded segment">
+          <div class="ui right aligned basic segment">
+            <div class="ui orange basic label">原创</div>
+          </div>
+          <h2 class="ui centered header">文章标题</h2>
+          <!-- 文章内容 -->
+          <div id="content" class="typo typo-selection m-padded-lr-reponsive m-padded-tb-large js-toc-content">
+
+          </div>
+          <!-- end 文章内容 -->
+          <!-- 博客信息 -->
+          <div class="ui attached positive message">
+            <div class="ui stackable middle aligned grid">
+              <div class="eleven wide column">
+                <ul class="list">
+                  <li>作者：haight</li>
+                  <li>发表时间：2022-12-12 09:08</li>
+                  <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+                  <li>公众号转载：请在文末添加作者公众号二维码</li>
+                </ul>
+              </div>
+              <div class="five wide column">
+                <img src="./static//images/wechat.png" alt="" class="ui right floated rounded bordered image" style="width: 110px;">
+              </div>
+            </div>
+          </div>
+          <!-- end 博客信息 -->
+        <!-- 留言区域 -->
+        <div id="comment-container" class="ui bottom attached segment">
+          <div class="ui teal segment">
+            <div class="ui threaded comments">
+              <h3 class="ui dividing header">留言</h3>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="https://picsum.photos/id/100/100">
+                </a>
+                <div class="content">
+                  <a class="author">Matt</a>
+                  <div class="metadata">
+                    <span class="date">Today at 5:42PM</span>
+                  </div>
+                  <div class="text">
+                    How artistic!
+                  </div>
+                  <div class="actions">
+                    <a class="reply">回复</a>
+                  </div>
+                </div>
+              </div>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="https://picsum.photos/id/101/100">
+                </a>
+                <div class="content">
+                  <a class="author">Elliot Fu</a>
+                  <div class="metadata">
+                    <span class="date">Yesterday at 12:30AM</span>
+                  </div>
+                  <div class="text">
+                    <p>This has been very useful for my research. Thanks as well!</p>
+                  </div>
+                  <div class="actions">
+                    <a class="reply">回复</a>
+                  </div>
+                </div>
+                <div class="comments">
+                  <div class="comment">
+                    <a class="avatar">
+                      <img src="https://picsum.photos/id/102/100">
+                    </a>
+                    <div class="content">
+                      <a class="author">Jenny Hess</a>
+                      <div class="metadata">
+                        <span class="date">Just now</span>
+                      </div>
+                      <div class="text">
+                        Elliot you are always so right :)
+                      </div>
+                      <div class="actions">
+                        <a class="reply">回复</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="https://picsum.photos/id/103/100">
+                </a>
+                <div class="content">
+                  <a class="author">Joe Henderson</a>
+                  <div class="metadata">
+                    <span class="date">5 days ago</span>
+                  </div>
+                  <div class="text">
+                    Dude, this is awesome. Thanks so much
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui form">
+            <div class="field">
+              <textarea name="content" placeholder="请输入评论信息" cols="30" rows="10"></textarea>
+            </div>
+            <div class="fields">
+              <div class="field m-mobile-wide m-margin-b-small">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input type="text" name="nickname" placeholder="姓名">
+                </div>
+              </div>
+              <div class="field m-mobile-wide m-margin-b-small">
+                <div class="ui left icon input">
+                  <i class="mail icon"></i>
+                  <input type="text" name="emial" placeholder="邮箱">
+                </div>
+              </div>
+              <div class="field m-mobile-wide m-margin-b-small">
+                <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end 留言区域 -->
+      </div>
+    </div>
+    <!-- END 中间内容 -->
+
+    <div id="sidebar" class="m-padded m-fixed m-right-bottom" style="display:none;">
+      <div class="ui vertical icon buttons">
+        <button type="button" class="ui toc teal button">目录</button>
+        <a href="#comment-container" class="ui teal button">留言</a>
+        <button type="button" class="ui wechat icon button"><i class="weixin icon"></i></button>
+        <div id="toTop" class="ui icon button"><i class="chevron up icon"></i></div>
+      </div>
+    </div>
+
+    <div class="ui toc-container flowing popup transition hidden" style="width: 250px;">
+      <ol class="js-toc"></ol>
+    </div>
+
+    <div id="qrcode" class="ui wechatQR flowing popup transition hidden" style="width: 130px;">
+      <!-- <img src="./static/images/wechat.png" alt="" class="ui bordered rounded image" style="width: 120px;"> -->
+    </div>
+  </div>
+  <!-- 页脚 -->
+  <div th:replace="_fragments :: footer"></div>
+  <!-- END 页脚 -->
+
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/js/semantic/semantic.min.js}"></script>
+    <!--/*/</th:block>/*/-->
+
+    <script>
+      $('.menu.toggle').click(function(){
+        $('.m-item').toggleClass('m-mobile-hide')
+      })
+
+      $('#payButton').popup({
+        popup: $('.payQR.popup'),
+        on: 'click',
+        position: 'bottom center'
+      })
+
+      $('.ui.toc').popup({
+        popup: $('.ui.toc-container'),
+        on: 'click',
+        position: 'left center'
+      })
+
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: false,
+      });
+
+      $('.wechat').popup({
+        popup: $('.wechatQR'),
+        on: 'hover',
+        position: 'left center'
+      })
+
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 110,
+        height: 110,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+      });
+
+      $('#toTop').click(function(){
+        $(window).scrollTo(0,500)
+      });
+
+      var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function(direction) {
+          if(direction === 'down'){
+            $('#sidebar').show(200);
+          }else{
+            $('#sidebar').hide(200);
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

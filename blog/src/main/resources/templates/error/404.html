@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404</title>
 </head>
 <body>
-<h1>404</h1>
+<!-- 导航 -->
+<div th:replace="_fragments :: menu(0)"></div>
+<!-- END 导航 -->
+
+<div class="m-container-small m-padded-tb-massive">
+    <div class="ui error message m-padded-tb-massive">
+        <div class="ui container">
+            <h2>404</h2>
+            <p>访问的资源不存在</p>
+        </div>
+    </div>
+</div>
+<!-- 页脚 -->
+<div th:replace="_fragments :: footer"></div>
+<!-- END 页脚 -->
 </body>
 </html>
